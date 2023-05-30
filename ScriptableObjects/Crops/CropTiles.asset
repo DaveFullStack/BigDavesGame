@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4124b150685064718a771a7743f32ca0, type: 3}
+  m_Name: CropTiles
+  m_EditorClassIdentifier: 
+  growthStageOne:
+  - {fileID: 11400000, guid: 0ac4bdbb9394c43a09dea3b467d52ba9, type: 2}
+  - {fileID: 11400000, guid: a783fe051488a41a784529800cefa5a1, type: 2}
+  - {fileID: 11400000, guid: ee278ae35918a4531a8aba90c2424aaa, type: 2}
+  growthStageTwo:
+  - {fileID: 11400000, guid: b853c2267d8c3432abe257923c535f6e, type: 2}
+  - {fileID: 11400000, guid: 072fcccea946047b18838a1232b07c59, type: 2}
+  - {fileID: 11400000, guid: f5f16f576a0924b49bb889a45070ac04, type: 2}
+  growthStageThree:
+  - {fileID: 11400000, guid: e706be3cd636a422c8674338fc04ddfa, type: 2}
+  - {fileID: 11400000, guid: fb4c2019fcf7a43bba384fcec8e5d75d, type: 2}
+  - {fileID: 11400000, guid: 5212eab64249f46c69d4daa43e9287fc, type: 2}
+  growthStageFour:
+  - {fileID: 11400000, guid: ec7c6b1c1b02843419721171d9ff508e, type: 2}
+  - {fileID: 11400000, guid: 61f318446227148d7821502864f9e34b, type: 2}
+  - {fileID: 11400000, guid: 777d01343abf94e3089e8cd3b6f42dbc, type: 2}
+  growthStageFive:
+  - {fileID: 11400000, guid: c96f118505f1c4930ab6e5f0f2b2ef66, type: 2}
+  - {fileID: 11400000, guid: d8e0b031ca3eb459b9f1bd1279ae9a63, type: 2}
+  - {fileID: 11400000, guid: d7ef71e9276f944699ca378794e7e194, type: 2}
+  growthStageSix:
+  - {fileID: 11400000, guid: b09eed4aa160a4d2db76b666a92a2517, type: 2}
+  - {fileID: 11400000, guid: d502735281cf54fa29af7033221896f2, type: 2}
+  - {fileID: 11400000, guid: 479cdfe744f9f4fe6bc54a32e8c46768, type: 2}
+  growthStageSeven:
+  - {fileID: 11400000, guid: 3de417ac7eeb046738ee187111763a4d, type: 2}
+  - {fileID: 11400000, guid: 3559c4147dcc24d169d6c4e49b0cd96a, type: 2}
+  - {fileID: 11400000, guid: 0924dd32e801649bc933a6c5ca250b46, type: 2}
+  harvestable:
+  - {fileID: 11400000, guid: b3489be25e7ca4d14af41c396b76775e, type: 2}
+  - {fileID: 11400000, guid: b47a556d29a974ad8898ec6590f3d265, type: 2}
+  - {fileID: 11400000, guid: 2d63e2c66e1e947c7995e913ef54968c, type: 2}
+  blankSpace: {fileID: 11400000, guid: 3cb9ec59e40134d9788973389ee5741d, type: 2}
