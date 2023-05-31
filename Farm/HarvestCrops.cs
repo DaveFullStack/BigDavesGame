@@ -97,9 +97,13 @@ public class HarvestCrops : MonoBehaviour
         }
         else if(farmInventory.slotFullCoffeeOne && !farmInventory.slotFullCoffeeTwo)
         {
+            string tastingNoteOne = cropInfo.tastingNotes[0];
+            string tastingNoteTwo = cropInfo.tastingNotes[1];
+
             farmInventory.originCoffeeTwo = cropInfo.origin;
             farmInventory.varietalCoffeeTwo = cropInfo.varietal;
-            farmInventory.tastingNotesCoffeeTwo = cropInfo.tastingNotes;
+            farmInventory.tastingNotesCoffeeTwo[0] = tastingNoteOne;
+            farmInventory.tastingNotesCoffeeTwo[0] = tastingNoteTwo;
             farmInventory.coffeeRatingCoffeeTwo = cropInfo.coffeeRating;
             farmInventory.yieldCoffeeTwo = cropInfo.yield;
             farmInventory.slotFullCoffeeTwo = true;
@@ -108,9 +112,13 @@ public class HarvestCrops : MonoBehaviour
         }
         else if (farmInventory.slotFullCoffeeTwo && farmInventory.slotFullCoffeeOne && !farmInventory.slotFullCoffeeThree)
         {
+            string tastingNoteOne = cropInfo.tastingNotes[0];
+            string tastingNoteTwo = cropInfo.tastingNotes[1];
+
             farmInventory.originCoffeeThree = cropInfo.origin;
             farmInventory.varietalCoffeeThree = cropInfo.varietal;
-            farmInventory.tastingNotesCoffeeThree = cropInfo.tastingNotes;
+            farmInventory.tastingNotesCoffeeThree[0] = tastingNoteOne;
+            farmInventory.tastingNotesCoffeeThree[1] = tastingNoteTwo;
             farmInventory.coffeeRatingCoffeeThree = cropInfo.coffeeRating;
             farmInventory.yieldCoffeeThree = cropInfo.yield;
             farmInventory.slotFullCoffeeThree = true;
@@ -127,5 +135,8 @@ public class HarvestCrops : MonoBehaviour
         farmInventory.slotFullCoffeeOne = false;
         farmInventory.slotFullCoffeeTwo = false;
         farmInventory.slotFullCoffeeThree = false;
+        farmInventory.yieldCoffeeOne = 0;
+        farmInventory.yieldCoffeeTwo = 0;
+        farmInventory.yieldCoffeeThree = 0;
     }
 }
