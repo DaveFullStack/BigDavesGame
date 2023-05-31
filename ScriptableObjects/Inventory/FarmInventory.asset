@@ -13,24 +13,33 @@ MonoBehaviour:
   m_Name: FarmInventory
   m_EditorClassIdentifier: 
   farm: Big Dave's Farm
-  originCoffeeOne: 
-  varietalCoffeeOne: 
+  originCoffeeOne: Colombia
+  varietalCoffeeOne: Gesha
   processCoffeeOne: 
-  tastingNotesCoffeeOne: []
-  coffeeRatingCoffeeOne: 
+  tastingNotesCoffeeOne:
+  - Tobacco
+  - Cranberry
+  - 
+  coffeeRatingCoffeeOne: 85
   yieldCoffeeOne: 0
   slotFullCoffeeOne: 0
-  originCoffeeTwo: 
-  varietalCoffeeTwo: 
+  originCoffeeTwo: Brazil
+  varietalCoffeeTwo: Pink Bourbon
   processCoffeeTwo: 
-  tastingNotesCoffeeTwo: []
-  coffeeRatingCoffeeTwo: 
+  tastingNotesCoffeeTwo:
+  - Chamomile
+  - Raspberry
+  - 
+  coffeeRatingCoffeeTwo: 75
   yieldCoffeeTwo: 0
   slotFullCoffeeTwo: 0
-  originCoffeeThree: 
-  varietalCoffeeThree: 
+  originCoffeeThree: Ethiopia
+  varietalCoffeeThree: Gesha
   processCoffeeThree: 
-  tastingNotesCoffeeThree: []
-  coffeeRatingCoffeeThree: 
+  tastingNotesCoffeeThree:
+  - Dark Chocolate
+  - Melon
+  - 
+  coffeeRatingCoffeeThree: 81
   yieldCoffeeThree: 0
   slotFullCoffeeThree: 0
