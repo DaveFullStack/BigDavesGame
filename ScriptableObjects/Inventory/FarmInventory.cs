@@ -33,14 +33,14 @@ public class FarmInventory : ScriptableObject
     public int yieldCoffeeTwo;
     public bool slotFullCoffeeTwo;
 
-    // Coffee three information
-    public string originCoffeeThree;
-    public string varietalCoffeeThree;
-    public string processCoffeeThree;
-    public string[] tastingNotesCoffeeThree;
-    public string coffeeRatingCoffeeThree;
-    public int yieldCoffeeThree;
-    public bool slotFullCoffeeThree;
+    // Guest Coffee information
+    public string originCoffeeGuest;
+    public string varietalCoffeeGuest;
+    public string processCoffeeGuest;
+    public string[] tastingNotesCoffeeGuest;
+    public string coffeeRatingCoffeeGuest;
+    public int yieldCoffeeGuest;
+    public bool slotFullCoffeeGuest;
 
     
 
