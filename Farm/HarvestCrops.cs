@@ -19,6 +19,8 @@ public class HarvestCrops : MonoBehaviour
     "White Chocolate", "Bin Bags", "Vomit", "Coffee", "Baileys", "Cherry", "Blackberry",
     "Raspberry", "Cranberry", "Jasmine", "Chamomile"};
 
+    
+
 
     private void Start()
     {
@@ -41,11 +43,14 @@ public class HarvestCrops : MonoBehaviour
         int randomIntTwo = Random.Range(0, 3);
         int randomIntTastingNotes = Random.Range(0, (tastingNotesOne.Length + 1));
         int randomIntTastingNotesTwo = Random.Range(0, (tastingNotesTwo.Length + 1));
+        int randomCoffeeRating = Random.Range(75, 95);
 
         cropInfo.origin = origin[randomInt];
         cropInfo.varietal = varietals[randomIntTwo];
         cropInfo.tastingNotes[0] = tastingNotesOne[randomIntTastingNotes];
         cropInfo.tastingNotes[1] = tastingNotesTwo[randomIntTastingNotesTwo];
+        cropInfo.coffeeRating = randomCoffeeRating;
+        
 
     }
 
