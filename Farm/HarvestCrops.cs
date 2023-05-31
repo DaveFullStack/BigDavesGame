@@ -20,11 +20,7 @@ public class HarvestCrops : MonoBehaviour
     "White Chocolate", "Bin Bags", "Vomit", "Coffee", "Baileys", "Cherry", "Blackberry",
     "Raspberry", "Cranberry", "Jasmine", "Chamomile"};
 
-    private void Start()
-    {
-        farmManager = FindObjectOfType<FarmManager>();
-        
-    }
+    
 
     public void HarvestCropsToInventory()
     {
@@ -50,6 +46,7 @@ public class HarvestCrops : MonoBehaviour
         cropInfo.tastingNotes[1] = tastingNotesTwo[randomIntTastingNotesTwo];
         cropInfo.coffeeRating = randomCoffeeRating.ToString();
         cropInfo.yield = Random.Range(10, 26);
+        Debug.Log("AssignInformation() assigned random information to cropInfo");
         
         
     }
@@ -59,19 +56,22 @@ public class HarvestCrops : MonoBehaviour
         if (farmInventory.yieldCoffeeOne == 0)
         {
             farmInventory.slotFullCoffeeOne = false;
+            Debug.Log("slotFullCoffeeOne Reset");
         }
         else if (farmInventory.yieldCoffeeTwo == 0)
         {
             farmInventory.slotFullCoffeeTwo = false;
+            Debug.Log("slotFullCoffeeTwo Reset");
         }
         else if (farmInventory.yieldCoffeeThree == 0)
         {
             farmInventory.slotFullCoffeeThree = false;
+            Debug.Log("slotFullCoffeeThree Reset");
         }
 
         else
         {
-            Debug.Log("there is coffee left so no bools reset");
+            Debug.Log("there is coffee in all 3 inventory slots so no bools reset");
             return;
         }
     }
@@ -86,7 +86,9 @@ public class HarvestCrops : MonoBehaviour
             farmInventory.coffeeRatingCoffeeOne = cropInfo.coffeeRating;
             farmInventory.yieldCoffeeOne = cropInfo.yield;
             farmInventory.slotFullCoffeeOne = true;
+            Debug.Log("Assigned coffee one info");
             return;
+            
 
         }
         else if(farmInventory.slotFullCoffeeOne && !farmInventory.slotFullCoffeeTwo)
@@ -97,6 +99,7 @@ public class HarvestCrops : MonoBehaviour
             farmInventory.coffeeRatingCoffeeTwo = cropInfo.coffeeRating;
             farmInventory.yieldCoffeeTwo = cropInfo.yield;
             farmInventory.slotFullCoffeeTwo = true;
+            Debug.Log("Assigned coffee two info");
             return;
         }
         else if (farmInventory.slotFullCoffeeTwo && farmInventory.slotFullCoffeeOne && !farmInventory.slotFullCoffeeThree)
@@ -107,6 +110,7 @@ public class HarvestCrops : MonoBehaviour
             farmInventory.coffeeRatingCoffeeThree = cropInfo.coffeeRating;
             farmInventory.yieldCoffeeThree = cropInfo.yield;
             farmInventory.slotFullCoffeeThree = true;
+            Debug.Log("Assigned coffee three info");
             return;
         }
         else
