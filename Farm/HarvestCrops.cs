@@ -36,8 +36,8 @@ public class HarvestCrops : MonoBehaviour
     {
         int randomInt = Random.Range(0, 3);
         int randomIntTwo = Random.Range(0, 3);
-        int randomIntTastingNotes = Random.Range(0, (tastingNotesOne.Length + 1));
-        int randomIntTastingNotesTwo = Random.Range(0, (tastingNotesTwo.Length + 1));
+        int randomIntTastingNotes = Random.Range(0, (tastingNotesOne.Length));
+        int randomIntTastingNotesTwo = Random.Range(0, (tastingNotesTwo.Length));
         int randomCoffeeRating = Random.Range(75, 95);
 
         cropInfo.origin = origin[randomInt];
