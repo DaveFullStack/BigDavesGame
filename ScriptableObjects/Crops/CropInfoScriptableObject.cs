@@ -12,6 +12,6 @@ public class CropInfoScriptableObject : ScriptableObject
     public string process;
     public string[] tastingNotes;
     public string coffeeRating;
-    public string yield;
+    public int yield;
     
 }
