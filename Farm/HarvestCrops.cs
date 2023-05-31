@@ -63,11 +63,11 @@ public class HarvestCrops : MonoBehaviour
             farmInventory.slotFullCoffeeTwo = false;
             Debug.Log("slotFullCoffeeTwo Reset");
         }
-        else if (farmInventory.yieldCoffeeThree == 0)
+        /*else if (farmInventory.yieldCoffeeThree == 0)
         {
             farmInventory.slotFullCoffeeThree = false;
             Debug.Log("slotFullCoffeeThree Reset");
-        }
+        }*/
 
         else
         {
@@ -110,7 +110,7 @@ public class HarvestCrops : MonoBehaviour
             Debug.Log("Assigned coffee two info");
             return;
         }
-        else if (farmInventory.slotFullCoffeeTwo && farmInventory.slotFullCoffeeOne && !farmInventory.slotFullCoffeeThree)
+        /*else if (farmInventory.slotFullCoffeeTwo && farmInventory.slotFullCoffeeOne && !farmInventory.slotFullCoffeeThree)
         {
             string tastingNoteOne = cropInfo.tastingNotes[0];
             string tastingNoteTwo = cropInfo.tastingNotes[1];
@@ -124,7 +124,7 @@ public class HarvestCrops : MonoBehaviour
             farmInventory.slotFullCoffeeThree = true;
             Debug.Log("Assigned coffee three info");
             return;
-        }
+        }*/
         else
         {
             Debug.Log("no space for coffee");
@@ -134,9 +134,9 @@ public class HarvestCrops : MonoBehaviour
     {
         farmInventory.slotFullCoffeeOne = false;
         farmInventory.slotFullCoffeeTwo = false;
-        farmInventory.slotFullCoffeeThree = false;
+        //farmInventory.slotFullCoffeeThree = false;
         farmInventory.yieldCoffeeOne = 0;
         farmInventory.yieldCoffeeTwo = 0;
-        farmInventory.yieldCoffeeThree = 0;
+        //farmInventory.yieldCoffeeThree = 0;
     }
 }
