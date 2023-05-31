@@ -45,7 +45,7 @@ public class HarvestCrops : MonoBehaviour
         cropInfo.origin = origin[randomInt];
         cropInfo.varietal = varietals[randomIntTwo];
         cropInfo.tastingNotes[0] = tastingNotesOne[randomIntTastingNotes];
-        cropInfo.tastingNotes[1] = tastingNotesTwo[randomIntTastingNotes];
+        cropInfo.tastingNotes[1] = tastingNotesTwo[randomIntTastingNotesTwo];
 
     }
 
