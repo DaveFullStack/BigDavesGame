@@ -80,9 +80,13 @@ public class HarvestCrops : MonoBehaviour
     {
         if (farmInventory.slotFullCoffeeOne == false)
         {
+            string tastingNoteOne = cropInfo.tastingNotes[0];
+            string tastingNoteTwo = cropInfo.tastingNotes[1];
+
             farmInventory.originCoffeeOne = cropInfo.origin;
             farmInventory.varietalCoffeeOne = cropInfo.varietal;
-            farmInventory.tastingNotesCoffeeOne = cropInfo.tastingNotes;
+            farmInventory.tastingNotesCoffeeOne[0] = tastingNoteOne;
+            farmInventory.tastingNotesCoffeeOne[1] = tastingNoteTwo;
             farmInventory.coffeeRatingCoffeeOne = cropInfo.coffeeRating;
             farmInventory.yieldCoffeeOne = cropInfo.yield;
             farmInventory.slotFullCoffeeOne = true;
