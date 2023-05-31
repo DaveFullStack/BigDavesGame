@@ -11,6 +11,7 @@ public class CropInfoScriptableObject : ScriptableObject
     public string varietal;
     public string process;
     public string[] tastingNotes;
-    public int coffeeRating;
+    public string coffeeRating;
+    public string yield;
     
 }

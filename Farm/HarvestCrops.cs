@@ -33,8 +33,6 @@ public class HarvestCrops : MonoBehaviour
         {
             AssignInformation();
         }
-        
-        
     }
 
     private void AssignInformation()
@@ -49,9 +47,10 @@ public class HarvestCrops : MonoBehaviour
         cropInfo.varietal = varietals[randomIntTwo];
         cropInfo.tastingNotes[0] = tastingNotesOne[randomIntTastingNotes];
         cropInfo.tastingNotes[1] = tastingNotesTwo[randomIntTastingNotesTwo];
-        cropInfo.coffeeRating = randomCoffeeRating;
+        cropInfo.coffeeRating = randomCoffeeRating.ToString();
+        cropInfo.yield = Random.Range(10, 26).ToString() + " cups";
         
-
+        
     }
 
 }
