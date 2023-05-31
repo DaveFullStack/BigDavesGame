@@ -6,6 +6,7 @@ public class HarvestCrops : MonoBehaviour
 {
     public CropInfoScriptableObject cropInfo;
     public FarmManager farmManager;
+    public FarmInventory farmInventory;
 
     private string[] origin = { "Ethiopia", "Brazil", "Colombia" };
 
@@ -19,12 +20,10 @@ public class HarvestCrops : MonoBehaviour
     "White Chocolate", "Bin Bags", "Vomit", "Coffee", "Baileys", "Cherry", "Blackberry",
     "Raspberry", "Cranberry", "Jasmine", "Chamomile"};
 
-    
-
-
     private void Start()
     {
         farmManager = FindObjectOfType<FarmManager>();
+        
     }
 
     public void HarvestCropsToInventory()
@@ -32,6 +31,8 @@ public class HarvestCrops : MonoBehaviour
         if (farmManager.cropsHarvestable)
         {
             AssignInformation();
+            ResetSlotFullBool();
+            AddInfoToCoffeeInventory();
         }
     }
 
@@ -53,4 +54,70 @@ public class HarvestCrops : MonoBehaviour
         
     }
 
+    private void ResetSlotFullBool()
+    {
+        if (farmInventory.yieldCoffeeOne == 0)
+        {
+            farmInventory.slotFullCoffeeOne = false;
+        }
+        else if (farmInventory.yieldCoffeeTwo == 0)
+        {
+            farmInventory.slotFullCoffeeTwo = false;
+        }
+        else if (farmInventory.yieldCoffeeThree == 0)
+        {
+            farmInventory.slotFullCoffeeThree = false;
+        }
+
+        else
+        {
+            Debug.Log("there is coffee left so no bools reset");
+            return;
+        }
+    }
+
+    private void AddInfoToCoffeeInventory()
+    {
+        if (farmInventory.slotFullCoffeeOne == false)
+        {
+            farmInventory.originCoffeeOne = cropInfo.origin;
+            farmInventory.varietalCoffeeOne = cropInfo.varietal;
+            farmInventory.tastingNotesCoffeeOne = cropInfo.tastingNotes;
+            farmInventory.coffeeRatingCoffeeOne = cropInfo.coffeeRating;
+            farmInventory.yieldCoffeeOne = cropInfo.yield;
+            farmInventory.slotFullCoffeeOne = true;
+            return;
+
+        }
+        else if(farmInventory.slotFullCoffeeOne && !farmInventory.slotFullCoffeeTwo)
+        {
+            farmInventory.originCoffeeTwo = cropInfo.origin;
+            farmInventory.varietalCoffeeTwo = cropInfo.varietal;
+            farmInventory.tastingNotesCoffeeTwo = cropInfo.tastingNotes;
+            farmInventory.coffeeRatingCoffeeTwo = cropInfo.coffeeRating;
+            farmInventory.yieldCoffeeTwo = cropInfo.yield;
+            farmInventory.slotFullCoffeeTwo = true;
+            return;
+        }
+        else if (farmInventory.slotFullCoffeeTwo && farmInventory.slotFullCoffeeOne && !farmInventory.slotFullCoffeeThree)
+        {
+            farmInventory.originCoffeeThree = cropInfo.origin;
+            farmInventory.varietalCoffeeThree = cropInfo.varietal;
+            farmInventory.tastingNotesCoffeeThree = cropInfo.tastingNotes;
+            farmInventory.coffeeRatingCoffeeThree = cropInfo.coffeeRating;
+            farmInventory.yieldCoffeeThree = cropInfo.yield;
+            farmInventory.slotFullCoffeeThree = true;
+            return;
+        }
+        else
+        {
+            Debug.Log("no space for coffee");
+        }
+    }
+    public void OnApplicationQuit()
+    {
+        farmInventory.slotFullCoffeeOne = false;
+        farmInventory.slotFullCoffeeTwo = false;
+        farmInventory.slotFullCoffeeThree = false;
+    }
 }
