@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
     private bool isWalking;
     private Animator animator;
     public bool isInteracting;
+    public bool inventoryOpen;
 
     public float moveSpeed = 3f;
 
@@ -20,6 +21,7 @@ public class PlayerController : MonoBehaviour
         animator = GetComponent<Animator>();
         isWalking = false;
         isInteracting = false;
+        inventoryOpen = false;
         
     }
 
@@ -69,4 +71,18 @@ public class PlayerController : MonoBehaviour
         Debug.Log("Player is not interacting");
     }
 
+    private void OnInventory(InputValue value)
+    {
+        if(inventoryOpen == false)
+        {
+            inventoryOpen = true;
+            Debug.Log("inventory open");
+            return;
+        }
+        else if (inventoryOpen == true)
+        {
+            inventoryOpen = false;
+            return;
+        }
+    }
 }
