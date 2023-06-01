@@ -103,7 +103,7 @@ public class HarvestCrops : MonoBehaviour
             farmInventory.originCoffeeTwo = cropInfo.origin;
             farmInventory.varietalCoffeeTwo = cropInfo.varietal;
             farmInventory.tastingNotesCoffeeTwo[0] = tastingNoteOne;
-            farmInventory.tastingNotesCoffeeTwo[0] = tastingNoteTwo;
+            farmInventory.tastingNotesCoffeeTwo[1] = tastingNoteTwo;
             farmInventory.coffeeRatingCoffeeTwo = cropInfo.coffeeRating;
             farmInventory.yieldCoffeeTwo = cropInfo.yield;
             farmInventory.slotFullCoffeeTwo = true;
