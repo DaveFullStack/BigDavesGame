@@ -37,13 +37,13 @@ public class InvAssignCoffeeInfo : MonoBehaviour
         coffeeOneText.text = $"Origin: {farmInventory.originCoffeeOne} \n" +
                 $"Variety: {farmInventory.varietalCoffeeOne}\n" +
                 $"Tasting Notes: {farmInventory.tastingNotesCoffeeOne[0]}, {farmInventory.tastingNotesCoffeeOne[1]} \n" +
-                $"Rating: {farmInventory.coffeeRatingCoffeeOne} / 100" +
+                $"Rating: {farmInventory.coffeeRatingCoffeeOne} / 100\n" +
                 $"Yield: {farmInventory.yieldCoffeeOne} Cups";
 
         coffeeTwoText.text = $"Origin: {farmInventory.originCoffeeTwo} \n" +
                 $"Variety: {farmInventory.varietalCoffeeTwo}\n" +
                 $"Tasting Notes: {farmInventory.tastingNotesCoffeeTwo[0]}, {farmInventory.tastingNotesCoffeeTwo[1]} \n" +
-                $"Rating: {farmInventory.coffeeRatingCoffeeTwo} / 100" +
+                $"Rating: {farmInventory.coffeeRatingCoffeeTwo} / 100\n" +
                 $"Yield: {farmInventory.yieldCoffeeTwo} Cups";
     }
 }
