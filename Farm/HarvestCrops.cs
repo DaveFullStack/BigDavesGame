@@ -5,7 +5,7 @@ using UnityEngine;
 public class HarvestCrops : MonoBehaviour
 {
     public CropInfoScriptableObject cropInfo;
-    private FarmManager farmManager;
+    public FarmManager farmManager;
     public FarmInventory farmInventory;
 
     private string[] origin = { "Ethiopia", "Brazil", "Colombia" };
@@ -21,10 +21,10 @@ public class HarvestCrops : MonoBehaviour
     "Raspberry", "Cranberry", "Jasmine", "Chamomile"};
 
 
-    private void Start()
-    {
-        farmManager = FindObjectOfType<FarmManager>();
-    }
+    //private void Start()
+    //{
+    //    //farmManager = FindObjectOfType<FarmManager>();
+    //}
 
 
 
