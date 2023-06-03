@@ -15,7 +15,10 @@ public class GuestCoffeeDeliveryKennyD : MonoBehaviour
     public Vector2 targetPosition; // set the target position in inspector for more control
 
     // bool to control ufo movement. might setup movement animations to control with this variable.
+    // need to change name of variable. something related to guest coffee button being pressed.
     public bool isMoving;
+
+    public bool isLeaving;
 
     // creating bools to control animator bools.
     private bool emitLightBeam;
@@ -23,7 +26,7 @@ public class GuestCoffeeDeliveryKennyD : MonoBehaviour
     private bool exitLightBeam;
 
 
-    public GameObject coffeeBoxToSpawn;
+    public GameObject coffeeDeliveryToSpawn;
 
 
 
@@ -51,7 +54,7 @@ public class GuestCoffeeDeliveryKennyD : MonoBehaviour
         //when light is at full beam activate present game object and move present
 
         //when present is at target position light beam turning off animation proceeds.
-
+        ReturnToStartPosition();
         //when light animation has ended send ufo back to the start position and deactivate
     }
 
@@ -88,7 +91,7 @@ public class GuestCoffeeDeliveryKennyD : MonoBehaviour
         }
         if (idleLightBeam)
         {
-
+            coffeeDeliveryToSpawn.SetActive(true);
             yield return new WaitForSeconds(ufoAnimator.GetCurrentAnimatorStateInfo(0).length);
 
             idleLightBeam = false;
@@ -102,12 +105,30 @@ public class GuestCoffeeDeliveryKennyD : MonoBehaviour
 
             exitLightBeam = false;
             ufoAnimator.SetBool("ExitLightBeam", false);
+            isLeaving = true;
         }
     }
 
     private void StartAnimationCycle()
     {
         StartCoroutine(CycleThroughUfoAnimations());
+    }
+
+    private void ReturnToStartPosition()
+    {
+        if (isLeaving)
+        {
+            Vector2 moveDirection = (startPosition - ufoRB.position).normalized;
+            Vector2 movement = moveDirection * (moveSpeed * Time.deltaTime);
+            ufoRB.position += movement;
+
+            if (Vector2.Distance(ufoRB.position, startPosition) <= 0.1f)
+            {
+                ufoRB.velocity = Vector2.zero;
+                ufoRB.position = startPosition;
+                isLeaving = false;
+            }
+        }
     }
 }
 
