@@ -16,7 +16,7 @@ public class GuestCoffeeDeliveryKennyD : MonoBehaviour
 
     // bool to control ufo movement. might setup movement animations to control with this variable.
     // need to change name of variable. something related to guest coffee button being pressed.
-    public bool isMoving;
+    public bool startDelivery;
 
     public bool isLeaving;
 
@@ -27,6 +27,9 @@ public class GuestCoffeeDeliveryKennyD : MonoBehaviour
 
 
     public GameObject coffeeDeliveryToSpawn;
+
+    //For the OrderGUestCoffeeButton - need to close the inventory page and then play the animation.
+    public GameObject guestCoffeeCloseInventory;
 
 
 
@@ -60,7 +63,7 @@ public class GuestCoffeeDeliveryKennyD : MonoBehaviour
 
     private void UfoEnter()
     {
-        if (isMoving)
+        if (startDelivery)
         {
             Vector2 moveDirection = (targetPosition - ufoRB.position).normalized;
             Vector2 movement = moveDirection * (moveSpeed * Time.deltaTime);
@@ -68,7 +71,7 @@ public class GuestCoffeeDeliveryKennyD : MonoBehaviour
 
             if (Vector2.Distance(ufoRB.position, targetPosition) <= 0.1f)
             {
-                isMoving = false;
+                startDelivery = false;
                 ufoRB.velocity = Vector2.zero;
                 ufoRB.position = targetPosition;
                 emitLightBeam = true;
@@ -129,6 +132,13 @@ public class GuestCoffeeDeliveryKennyD : MonoBehaviour
                 isLeaving = false;
             }
         }
+    }
+
+    public void OrderGuestCoffeeButton()
+    {
+        guestCoffeeCloseInventory.SetActive(false);
+        startDelivery = true;
+
     }
 }
 
