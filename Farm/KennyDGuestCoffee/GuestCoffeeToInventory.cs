@@ -12,24 +12,36 @@ public class GuestCoffeeToInventory : MonoBehaviour
     public TextMeshProUGUI textToDisplay;
 
     private PlayerController playerController;
+    
 
     public string[] textOptions;
+
+    
 
     // Start is called before the first frame update
     void Start()
     {
         coffeeDeliveryBox = gameObject;
         playerController = FindObjectOfType<PlayerController>();
+        Debug.Log(playerController);
         
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (playerInArea && playerController.isInteracting)
+        //Debug.Log(playerInArea);
+        
+        if (playerInArea && !canvasGuestCoffeeText.activeInHierarchy)
         {
-            playerController.isInteracting = false;
-            DisplayText();
+            if (playerController.isInteracting)
+            {
+                Debug.Log("Calling displaytext");
+                DisplayText();
+                playerController.isInteracting = false;
+                return;
+            }
+            
         }
         
     }
@@ -39,6 +51,8 @@ public class GuestCoffeeToInventory : MonoBehaviour
         canvasGuestCoffeeText.SetActive(true);
         string chosenText = textOptions[Random.Range(0, textOptions.Length)];
         textToDisplay.text = chosenText;
+        //playerController.isInteracting = false;
+        
 
     }
 
@@ -53,11 +67,13 @@ public class GuestCoffeeToInventory : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             playerInArea = true;
+            Debug.Log("player in area");
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
         playerInArea = false;
+        Debug.Log("Player not in area");
     }
 
     
