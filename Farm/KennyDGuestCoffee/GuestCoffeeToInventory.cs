@@ -16,6 +16,10 @@ public class GuestCoffeeToInventory : MonoBehaviour
 
     public string[] textOptions;
 
+    private bool startOpenDeliveryAnimation;
+
+    private bool collision;
+
     
 
     // Start is called before the first frame update
@@ -32,16 +36,13 @@ public class GuestCoffeeToInventory : MonoBehaviour
     {
         //Debug.Log(playerInArea);
         
-        if (playerInArea && !canvasGuestCoffeeText.activeInHierarchy)
+        if (playerInArea && !canvasGuestCoffeeText.activeInHierarchy && collision)
         {
-            if (playerController.isInteracting)
-            {
-                Debug.Log("Calling displaytext");
-                DisplayText();
-                playerController.isInteracting = false;
-                return;
-            }
+            Debug.Log("Calling displaytext");
+            DisplayText();
+            startOpenDeliveryAnimation = true;
             
+            return;
         }
         
     }
@@ -76,5 +77,24 @@ public class GuestCoffeeToInventory : MonoBehaviour
         Debug.Log("Player not in area");
     }
 
-    
+    private void OnCollisionEnter2D(Collision2D collide)
+    {
+        collision = true;
+    }
+
+    private void OnCollisionExit2D(Collision2D collide)
+    {
+        collision = false;
+        
+    }
+
+    //private IEnumerator CycleThroughDeliveryAnimations()
+    //{
+    //    if (startOpenDeliveryAnimation)
+    //    {
+    //        
+    //    }
+    //}
+
+
 }
