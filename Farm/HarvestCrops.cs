@@ -7,6 +7,7 @@ public class HarvestCrops : MonoBehaviour
     public CropInfoScriptableObject cropInfo;
     public FarmManager farmManager;
     public FarmInventory farmInventory;
+    
 
     private string[] origin = { "Ethiopia", "Brazil", "Colombia" };
 
@@ -145,4 +146,6 @@ public class HarvestCrops : MonoBehaviour
         farmInventory.yieldCoffeeTwo = 0;
         //farmInventory.yieldCoffeeThree = 0;
     }
+
+    
 }
