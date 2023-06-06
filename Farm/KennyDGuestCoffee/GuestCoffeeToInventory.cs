@@ -6,18 +6,15 @@ using TMPro;
 public class GuestCoffeeToInventory : MonoBehaviour
 {
     private GameObject coffeeDeliveryBox;
-
     private bool playerInArea;
+    private PlayerController playerController;
+
     public GameObject canvasGuestCoffeeText;
     public TextMeshProUGUI textToDisplay;
-
-    private PlayerController playerController;
-    
-
     public string[] textOptions;
 
+    
     private bool startOpenDeliveryAnimation;
-
     private bool collision;
 
     
@@ -27,7 +24,7 @@ public class GuestCoffeeToInventory : MonoBehaviour
     {
         coffeeDeliveryBox = gameObject;
         playerController = FindObjectOfType<PlayerController>();
-        Debug.Log(playerController);
+        //Debug.Log(playerController);
         
     }
 
@@ -38,7 +35,7 @@ public class GuestCoffeeToInventory : MonoBehaviour
         
         if (playerInArea && !canvasGuestCoffeeText.activeInHierarchy && collision)
         {
-            Debug.Log("Calling displaytext");
+            Debug.Log("Calling displaytext for guest coffee");
             DisplayText();
             startOpenDeliveryAnimation = true;
             
@@ -68,13 +65,13 @@ public class GuestCoffeeToInventory : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             playerInArea = true;
-            Debug.Log("player in area");
+            //Debug.Log("player in area");
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
         playerInArea = false;
-        Debug.Log("Player not in area");
+        //Debug.Log("Player not in area");
     }
 
     private void OnCollisionEnter2D(Collision2D collide)
@@ -87,14 +84,5 @@ public class GuestCoffeeToInventory : MonoBehaviour
         collision = false;
         
     }
-
-    //private IEnumerator CycleThroughDeliveryAnimations()
-    //{
-    //    if (startOpenDeliveryAnimation)
-    //    {
-    //        
-    //    }
-    //}
-
 
 }
