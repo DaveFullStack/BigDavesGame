@@ -12,10 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85ca84ebb12964f04b15bf8a6630f3aa, type: 3}
   m_Name: KennyDCropInfo
   m_EditorClassIdentifier: 
-  farm: Big Dave's Farm
-  origin: 
-  varietal: 
+  farm: The Four Acres
+  origin: Space
+  varietal: spac
   process: 
-  tastingNotes: []
+  tastingNotes:
+  - 
+  - 
   coffeeRating: 
   yield: 0
