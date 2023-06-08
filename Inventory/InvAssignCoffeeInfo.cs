@@ -10,6 +10,7 @@ public class InvAssignCoffeeInfo : MonoBehaviour
     public FarmInventory farmInventory;
     public TextMeshProUGUI coffeeOneText;
     public TextMeshProUGUI coffeeTwoText;
+    public TextMeshProUGUI guestCoffeeText;
 
     private PlayerController playerController;
 
@@ -45,5 +46,12 @@ public class InvAssignCoffeeInfo : MonoBehaviour
                 $"Tasting Notes: {farmInventory.tastingNotesCoffeeTwo[0]}, {farmInventory.tastingNotesCoffeeTwo[1]} \n" +
                 $"Rating: {farmInventory.coffeeRatingCoffeeTwo} / 100\n" +
                 $"Yield: {farmInventory.yieldCoffeeTwo} Cups";
+
+        guestCoffeeText.text = $"Origin: {farmInventory.originCoffeeGuest} \n" +
+                $"Variety: {farmInventory.varietalCoffeeGuest}\n" +
+                $"Tasting Notes: {farmInventory.tastingNotesCoffeeGuest[0]}, {farmInventory.tastingNotesCoffeeGuest[1]} \n" +
+                $"Rating: {farmInventory.coffeeRatingCoffeeGuest} / 100\n" +
+                $"Yield: {farmInventory.yieldCoffeeGuest} Cups";
     }
+
 }
