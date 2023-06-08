@@ -31,6 +31,8 @@ public class GuestCoffeeDeliveryKennyD : MonoBehaviour
     //For the OrderGUestCoffeeButton - need to close the inventory page and then play the animation.
     public GameObject guestCoffeeCloseInventory;
 
+    public FarmInventory farmInventory;
+
 
 
     // Start is called before the first frame update
@@ -40,6 +42,7 @@ public class GuestCoffeeDeliveryKennyD : MonoBehaviour
         ufoRB = ufo.GetComponent<Rigidbody2D>();
         ufoAnimator = ufo.GetComponent<Animator>();
         ufoRB.position = startPosition;
+        
     }
 
     private void FixedUpdate()
@@ -136,8 +139,18 @@ public class GuestCoffeeDeliveryKennyD : MonoBehaviour
 
     public void OrderGuestCoffeeButton()
     {
-        guestCoffeeCloseInventory.SetActive(false);
-        startDelivery = true;
+
+        if (farmInventory.slotFullCoffeeGuest == false)
+        {
+            guestCoffeeCloseInventory.SetActive(false);
+            startDelivery = true;
+
+        }
+        else
+        {
+            Debug.Log("You caznt order guest coffee, your slot is full");
+        }
+        
 
     }
 }
