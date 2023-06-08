@@ -13,30 +13,32 @@ MonoBehaviour:
   m_Name: FarmInventory
   m_EditorClassIdentifier: 
   farm: Big Dave's Farm
-  originCoffeeOne: Brazil
-  varietalCoffeeOne: Gesha
+  originCoffeeOne: Ethiopia
+  varietalCoffeeOne: Pink Bourbon
   processCoffeeOne: 
   tastingNotesCoffeeOne:
-  - Apricot
-  - Grapefruit
+  - Sweet Orange
+  - Vomit
   - 
-  coffeeRatingCoffeeOne: 89
+  coffeeRatingCoffeeOne: 76
   yieldCoffeeOne: 0
   slotFullCoffeeOne: 0
-  originCoffeeTwo: Ethiopia
+  originCoffeeTwo: Brazil
   varietalCoffeeTwo: Pacamara
   processCoffeeTwo: 
   tastingNotesCoffeeTwo:
-  - Dark Chocolate
-  - Honey
+  - Bad Breath
+  - Chamomile
   - 
-  coffeeRatingCoffeeTwo: 86
+  coffeeRatingCoffeeTwo: 94
   yieldCoffeeTwo: 0
   slotFullCoffeeTwo: 0
-  originCoffeeGuest: 
-  varietalCoffeeGuest: 
+  originCoffeeGuest: Mud Floods
+  varietalCoffeeGuest: spaceeeeeee
   processCoffeeGuest: 
-  tastingNotesCoffeeGuest: []
-  coffeeRatingCoffeeGuest: 
-  yieldCoffeeGuest: 0
-  slotFullCoffeeGuest: 0
+  tastingNotesCoffeeGuest:
+  - Space
+  - Milky Way
+  coffeeRatingCoffeeGuest: 94
+  yieldCoffeeGuest: 10
+  slotFullCoffeeGuest: 1
