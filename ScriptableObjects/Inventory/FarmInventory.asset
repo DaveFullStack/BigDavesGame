@@ -33,12 +33,12 @@ MonoBehaviour:
   coffeeRatingCoffeeTwo: 94
   yieldCoffeeTwo: 0
   slotFullCoffeeTwo: 0
-  originCoffeeGuest: Mud Floods
+  originCoffeeGuest: Flat Earth
   varietalCoffeeGuest: spaceeeeeee
   processCoffeeGuest: 
   tastingNotesCoffeeGuest:
-  - Space
-  - Milky Way
-  coffeeRatingCoffeeGuest: 94
-  yieldCoffeeGuest: 10
+  - Saucy BBQ
+  - HazleNut
+  coffeeRatingCoffeeGuest: 91
+  yieldCoffeeGuest: 14
   slotFullCoffeeGuest: 1
